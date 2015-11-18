@@ -1,11 +1,18 @@
-<%= form_for @user do |user| %>
 
-	<%= user.text_field :fname %> <br><br>
-	<%= user.text_field :lname %> <br><br>
-	<%= user.text_field :username %> <br><br>
-	<%= user.password_field :password %> <br><br>
-	<%= user.password_field :password_confirmation %> <br><br>
-	<%= user.file_field :avatar %>
-	<%= user.submit %>
-	
-<% end %>
+<div class="user_form">
+	<%= form_for @user do |user|%>
+		
+		<div class="form">
+			<%= user.text_field :fname, class: :form_fields, :placeholder => "First Name" %> <br><br>
+			<%= user.text_field :lname, class: :form_fields, :placeholder => "Last Name" %> <br><br>
+			<%= user.text_field :username, class: :form_fields, :placeholder => "Username"  %> <br><br>
+			<%= user.password_field :password, class: :form_fields, :placeholder => "Password"  %> <br><br>
+			<%= user.password_field :password_confirmation, class: :form_fields, :placeholder => "Confirm Password"  %> 
+			<br><br>
+			<%= user.file_field :avatar, :class => 'file_field' %>
+		</div>
+		<div class="submits">
+		<%= user.submit 'CREATE MIXT ACCOUNT', :class => 'submit_button'  %>
+		</div>
+	<% end %>
+</div>

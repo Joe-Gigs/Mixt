@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mixt</title>
+  <title>Mixt | Share Mixtapes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- GOOGLE FONTS -->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300,300italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-<% if current_user %>
-
-<%= link_to "create a mixtape", new_tape_path %>
-<%= link_to "sign out", log_out_path, method: :delete %> 
-<% else %>
-<%= link_to "sign in?", log_in_path %>
-<%= link_to "sign up?", new_user_path %>
-<% end %>
-	
 
 <%= yield %>
 
 </body>
 </html>
+
+

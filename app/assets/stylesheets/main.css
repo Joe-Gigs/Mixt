@@ -1,0 +1,305 @@
+/* 
+====== COLOR REFERENCES =======
+BLUE COLOR: #8BECE8; 
+PURPLE COLOR: #50125E;
+PINK COLOR: #FE1FF7;
+===============================
+*/
+
+.logo {
+  width: 120px;
+  margin-left: 50px;
+  margin-top: 20px; }
+
+nav li {
+  list-style: none;
+  display: inline;
+  padding: 5px;
+  color: #50125E; }
+  nav li a:hover {
+    color: #8BECE8;
+    transition-delay: 0.2s;
+    /* delays for 1 second */
+    -webkit-transition-delay: 0.2s;
+    /* for Safari & Chrome */
+    transition: all 300ms linear; }
+nav ul {
+  float: right;
+  margin-right: 50px;
+  margin-top: 30px; }
+
+#home_wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  background: url('background.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.logo {
+  float: left; }
+
+.home-btn {
+  margin-top: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  display: block;
+  background-color: #50125E;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0px 0px 40px #cfcfcf; }
+  .home-btn h2 {
+    padding: 0px; }
+  .home-btn:hover {
+    background-color: #fe1ff7;
+    cursor: hand;
+    transition-delay: 0.2s;
+    /* delays for 1 second */
+    -webkit-transition-delay: 0.2s;
+    /* for Safari & Chrome */
+    transition: all 300ms linear; }
+
+footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 100px; }
+  footer hr {
+    width: 200px; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-size: 30px;
+  font-color: white;
+  font-family: "Josefin Sans", monospace;
+  letter-spacing: 4.5pt; }
+
+h2 {
+  font-size: 12px;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 3pt; }
+
+h3 {
+  font-size: 11px;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white; }
+
+h5 {
+  font-size: 8px;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8BECE8; }
+
+h6 {
+  font-size: 6px;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 400;
+  color: #50125E;
+  letter-spacing: 2pt;
+  text-transform: uppercase; }
+
+a {
+  text-decoration: none; }
+
+.whitelinks {
+  text-decoration: none;
+  color: white;
+  transition-delay: 0.2s;
+  /* delays for 1 second */
+  -webkit-transition-delay: 0.2s;
+  /* for Safari & Chrome */
+  transition: all 200ms linear; }
+  .whitelinks:hover {
+    text-decoration: none; }
+
+.form_fields {
+  border: none;
+  border-bottom: 1px solid #b2b2b2;
+  width: 400px;
+  font-family: "Josefin Sans", monospace;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: #c4c4c4;
+}
+
+.submit_button {
+  border: none;
+  border-radius: 10px;
+  background-color: #FE1FF7;
+  text-align: center;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 5px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submits {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.file_field{
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Josefin Sans", monospace;
+  font-weight: 300;
+  font-size: 12px;
+  color: #c4c4c4;
+  letter-spacing: 5px;
+  padding: 8px;
+}
+
+#full_grad {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(#fe1ff7, #50125E);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fe1ff7, #50125E);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fe1ff7, #50125E);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fe1ff7, #50125E);
+  /* Standard syntax */ }
+  #full_grad ul li i {
+    color: #8BECE8; }
+    #full_grad ul li i:hover {
+      color: #fff;
+      transition-delay: 0.2s;
+      /* delays for 1 second */
+      -webkit-transition-delay: 0.2s;
+      /* for Safari & Chrome */
+      transition: all 200ms linear; }
+
+#sign_wrap {
+  display: inline;
+  position: relative;
+  width: 1000px; }
+  #sign_wrap .centered-text {
+    text-align: center;
+    margin-top: 160px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto; }
+    #sign_wrap .centered-text h2 {
+      font-weight: 700; }
+  #sign_wrap .form {
+    background-color: white;
+    margin: 0 auto;
+    width: 600px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    border-style: 1px solid white;
+    border-radius: 20px; }
+  #sign_wrap .pink-btn {
+    background-color: #fe1ff7;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #fe1ff7;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0; }
+  #sign_wrap h3 {
+    text-align: center;
+    margin: 20px auto; }
+    #sign_wrap h3 a {
+      text-decoration: underline;
+      color: #8BECE8; }
+      #sign_wrap h3 a:hover {
+        color: white;
+        transition-delay: 0.2s;
+        /* delays for 1 second */
+        -webkit-transition-delay: 0.2s;
+        /* for Safari & Chrome */
+        transition: all 200ms linear; }
+
+.terms {
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: -20px; }
+  .terms ul li {
+    display: inline-block; }
+
+html {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari and Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */ }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

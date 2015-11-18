@@ -1,0 +1,11 @@
+<%= form_for @user do |user| %>
+
+	<%= user.text_field :fname %> <br><br>
+	<%= user.text_field :lname %> <br><br>
+	<%= user.text_field :username %> <br><br>
+	<%= user.password_field :password %> <br><br>
+	<%= user.password_field :password_confirmation %> <br><br>
+	<%= user.file_field :avatar %>
+	<%= user.submit %>
+	
+<% end %>

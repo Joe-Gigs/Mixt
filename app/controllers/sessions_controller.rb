@@ -5,13 +5,13 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by_username(params[:username])
-    if @user 
+    if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Success."
     else
       flash[:alert] = "There was a problem"
     end
-      redirect_to root_path
+      redirect_to @user
   end
 
   def destroy

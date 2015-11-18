@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117194023) do
+ActiveRecord::Schema.define(version: 20151118195042) do
+
+  create_table "songs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tapes", force: :cascade do |t|
     t.string   "tapename"

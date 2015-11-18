@@ -1,3 +1,6 @@
 
-
+<% if current_user %>
+<%= link_to "back to home",user_path(current_user) %>
 <%= audio_tag(@tape.song, autoplay: true, controls: true)%>
+
+<% end %>

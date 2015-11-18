@@ -1,3 +1,6 @@
+<div class="all_wrapper">
+	<a href="/"><%= image_tag "logo_pink.png", class: :logo %></a>
+
 
 <% if current_user %>
 <%= link_to "create new mixtape", new_user_tape_path(current_user) %>
@@ -7,4 +10,37 @@
 <%= image_tag @user.avatar.url(:medium) %>
 <% end %>
 
+
+
+			<!--  NAVBAR -->
+			<nav class="all_nav">
+				<ul>
+					<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
+					<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter"></i></a></li>
+					<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+				</ul>
+		</nav>
+
+		<div id="prof_info">
+			<h2><%= @user.fname + " " + @user.lname %></h2>
+			<hr>
+			<span class="prof_pic"><%= image_tag @user.avatar.url(:medium) %></span>
+			<div class="tapes_shared"><h2>"No. tapes shared"</h2></div>
+		</div>
+
+		<div id="tapelist">
+				<h2>YOUR MIXTAPES</h2>
+				<hr>
+		</div>
+
+	
+
+</div>
+
+
+	<div class="all_footer">
+		<hr><br>
+		<span class="copyright">&copy; Mixt</span>
+	</div>
 

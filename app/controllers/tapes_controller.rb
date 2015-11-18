@@ -27,6 +27,7 @@ class TapesController < ApplicationController
 
 	def update
 		if @tape.update(tape_params)
+			@tape.user_id = params[:user_id]
 			redirect_to [@tape.user, @tape]
 			
 		end

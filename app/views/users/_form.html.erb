@@ -1,11 +1,11 @@
 <%= form_for @user do |user| %>
 
-	<%= user.text_field :fname %> <br><br>
-	<%= user.text_field :lname %> <br><br>
-	<%= user.text_field :username %> <br><br>
-	<%= user.password_field :password %> <br><br>
-	<%= user.password_field :password_confirmation %> <br><br>
-	<%= user.file_field :avatar %>
+	<p>first name<p><%= user.text_field :fname %> <br>
+	<p>last name<p><%= user.text_field :lname %> <br>
+	<p>create a username</p><%= user.text_field :username %> <br>
+	<P>choose a password</p><%= user.password_field :password %> <br>
+	<p>confirm password</p><%= user.password_field :password_confirmation %> <br>
+	<p>profile pic</p><%= user.file_field :avatar %>
 	<%= user.submit %>
 	
 <% end %>

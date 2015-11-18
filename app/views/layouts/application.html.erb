@@ -10,7 +10,7 @@
 
 <% if current_user %>
 
-<%= link_to "create a mixtape", new_tape_path %>
+<%= link_to "create a mixtape", new_user_tape_path(current_user) %>
 <%= link_to "sign out", log_out_path, method: :delete %> 
 <% else %>
 <%= link_to "sign in?", log_in_path %>

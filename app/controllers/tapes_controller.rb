@@ -7,15 +7,17 @@ class TapesController < ApplicationController
 	end
 
 	def new
+		@user = current_user
 		@tape = Tape.new
 	end
 
 	def create
 		@tape = Tape.new(tape_params)
-		# @tape.user_id = params(:user_id)
-		@tape.save
-			redirect_to @tape
-end
+		@tape.user_id = params[:user_id]
+		if @tape.save
+			redirect_to user_tape_path(params[:user_id], @tape.id)
+		end
+	end
 	def show
 
 	end
@@ -24,22 +26,23 @@ end
 	end
 
 	def update
+		if @tape.update(tape_params)
+			redirect_to [@tape.user, @tape]
+			
+		end
 	end
 
 	def destroy
 	end
 
-private
+	private
 
-def tape_params
-	params.require(:tape).permit(:tapename, :description, :user_id, :song)
+	def tape_params
+		params.require(:tape).permit(:tapename, :description, :user_id, :song).merge(user: current_user)
 	end
-
+	
 	def set_tape
-    @tape = Tape.find(params[:id])
-  end
-
-	
-	
+		@tape = Tape.find(params[:id])
+	end
 end
 

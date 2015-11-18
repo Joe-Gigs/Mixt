@@ -1,9 +1,37 @@
-<%= form_tag do  %>
-	<%=label_tag :username %>
-	<%= text_field_tag :username %>
-	<%= label_tag :password %>
-	<%= password_field_tag :password %>
-	<%= submit_tag :submit%>
+<div id="full_grad">
+		<a href="/"><%= image_tag "logo_blue.png", class: :logo %></a>
 
+		<!-- HOME NAVBAR -->
+		<nav>
+			<ul>
+				<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
+				<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
+				<li><a href=""><i class="fa fa-twitter"></i></a></li>
+				<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+			</ul>
+		</nav>
 
-	<% end %>
+		<!-- MAIN FORM -->
+		<div id="sign_wrap">
+			<div class="centered-text">
+				<h1 style="color:white">WELCOME BACK!</h1>
+				<br>
+			</div>
+			
+			<%= render 'new_user_form' %>
+		
+			<h3>DON'T HAVE AN ACCOUNT? <a href="/users/new"><strong>SIGN UP</strong></a></h3>
+		</div>
+		
+		<!-- SIGNUP/SIGNIN FOOTER -->
+		<div class="terms">
+			<ul>
+				<li><h5>FORGOT PASSWORD? • </h5></li>
+				<li><h5>PRIVACY POLICY • </h5></li>
+				<li><h5>CONTACT</h5></li>
+			</ul>
+		</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/colors.js"></script>  

@@ -1,11 +1,77 @@
 /* 
+
+       ༼ つ ◕_◕ ༽つ CSS!
+
 ====== COLOR REFERENCES =======
 BLUE COLOR: #8BECE8; 
 PURPLE COLOR: #50125E;
 PINK COLOR: #FE1FF7;
 ===============================
+
 */
 
+/*========================================
+   FULL STYLING HTML/BODY AND ANIMATIONS
+=========================================*/
+
+html {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */ }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+
+
+/*========================================
+                HOME STYLING
+=========================================*/
 .logo {
   width: 120px;
   margin-left: 50px;
@@ -73,6 +139,11 @@ footer {
   footer hr {
     width: 200px; }
 
+
+/*========================================
+                TEXT FORMATTING 
+=========================================*/
+
 a {
   text-decoration: none; }
 
@@ -115,6 +186,9 @@ h6 {
 a {
   text-decoration: none; }
 
+/*========================================
+        SING UP/LOG IN PAGE ELEMENTS
+=========================================*/
 .whitelinks {
   text-decoration: none;
   color: white;
@@ -248,58 +322,116 @@ a {
   .terms ul li {
     display: inline-block; }
 
-html {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-  margin-left: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  /* Firefox */
-  -webkit-animation: fadein 2s;
-  /* Safari and Chrome */
-  -o-animation: fadein 2s;
-  /* Opera */ }
+/*========================================
+          PROFILE PAGE ELEMENTS 
+=========================================*/
+/* INITIAL ELEMENTS */
+.all_nav i {
+  color: #EC2874; }
+.all_nav i:hover {
+  color: #8BECE8;
+  transition-delay: 0.2s;
+  /* delays for 1 second */
+  -webkit-transition-delay: 0.2s;
+  /* for Safari & Chrome */
+  transition: all 300ms linear; }
 
-@keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-moz-keyframes fadein {
-  /* Firefox */
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-webkit-keyframes fadein {
-  /* Safari and Chrome */
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-o-keyframes fadein {
-  /* Opera */
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-body {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-  margin-left: 0;
-  top: 0;
+/* MID ELEMENTS */
+/* (LEFT SIDE) */
+.all_wrapper {
+  background-color: #EAFAFA;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  padding-top: 0px;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%; }
+}
+
+#prof_info {
+  margin-top: 120px;
+  max-width: 200px;
+  float: left;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+#prof_info h2 {
+  color: #7e7e7e;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#prof_info .tapes_shared {
+  background-color: black;
+  max-width: 200px;
+  color: white;
+  margin-top: -4px;
+  padding: 5px;
+}
+
+#prof_info .tapes_shared h2 {
+  color: white;
+}
+
+#prof_info hr {
+  border: 1px solid #7E7E7E;
+}
+
+.prof_pic img {
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+/* (RIGHT SIDE) */
+
+#tapelist{
+  float: left;
+  width: 650px;
+  display: inline-block;
+  position: relative;
+  margin-top: 120px;
+  margin-left: 200px;
+}
+
+#tapelist h2{
+  color: #7e7e7e;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#tapelist hr {
+  border: 1px solid #7E7E7E;
+}
+
+
+
+/* FOOTER ELEMENTS */
+.all_footer {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  color: #c4c4c4;
+  font-family: "Josefin Sans", monospace;
+  font-size: 10px;
+  position: fixed;
+  bottom: 25px;
+  background-color: #EAFAFA;
+}
+  .all_footer hr{
+    color: #c4c4c4;
+  }
+
+  .copyright {
+    color: #c4c4c4;
+    font-family: "Josefin Sans", monospace;
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+
+
+
 
 /*# sourceMappingURL=main.css.map */

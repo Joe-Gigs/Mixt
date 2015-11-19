@@ -2,8 +2,8 @@
 <%= tape.text_field :tapename %><br><br>
 <%= tape.text_field :description %><br><br>
 
-<%= tape.file_field :song %><br><br>
+<%= tape.file_field :song, multiple: true %><br><br>
 <%= tape.submit 'Upload' %>
 	
 <% end %>
-	
+		

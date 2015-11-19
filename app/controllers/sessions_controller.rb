@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    
   end
 
   def create
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "Signed out."
     redirect_to root_path
-    puts "session terminated"
+    puts "**session terminated**"
   end
 
 end

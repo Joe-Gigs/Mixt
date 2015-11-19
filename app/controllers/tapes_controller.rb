@@ -15,9 +15,10 @@ class TapesController < ApplicationController
 		@tape = Tape.new(tape_params)
 		@tape.user_id = params[:user_id]
 		if @tape.save
-			redirect_to user_tape_path(params[:user_id], @tape.id)
+			redirect_to user_tapes_path(params[:user_id], @tape.id)
 		end
 	end
+	
 	def show
 
 	end
@@ -34,6 +35,8 @@ class TapesController < ApplicationController
 	end
 
 	def destroy
+		@tape.destroy
+		redirect_to user_tape_path
 	end
 
 	private

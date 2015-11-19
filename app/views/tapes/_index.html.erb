@@ -1,0 +1,6 @@
+<% if current_user %>
+<% @user.tapes.each do |tape| %>
+<%= link_to tape.tapename %>
+
+<% end %>
+	<% end %>

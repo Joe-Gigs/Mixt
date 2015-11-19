@@ -4,11 +4,11 @@
 
 <% if current_user %>
 <%= link_to "create new mixtape", new_user_tape_path(current_user) %>
-<%= link_to "see your tapes", user_tapes_path(current_user) %>
+
 <%= link_to "sign out", log_out_path %>
 
-<%= image_tag @user.avatar.url(:medium) %>
-<% end %>
+
+<% end %>	
 
 
 
@@ -33,7 +33,7 @@
 				<h2>YOUR MIXTAPES</h2>
 				<hr>
 		</div>
-
+<%= render 'tapes/index' %>
 	
 
 </div>

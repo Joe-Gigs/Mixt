@@ -30,3 +30,4 @@ class MixtapesController < ApplicationController
 	end
 
 end
+end

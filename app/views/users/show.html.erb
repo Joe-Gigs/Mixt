@@ -1,47 +1,48 @@
 <div class="all_wrapper">
-	<a href="/"><%= image_tag "logo_pink.png", class: :logo %></a>
+<%=  link_to(image_tag("logo_pink.png", size:"120x49"), user_path(current_user), class: :logo) %>
 
+	<!--  NAVBAR -->
+	<nav class="all_nav">
+		<ul>
+			<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
+			<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
+			<li><a href=""><i class="fa fa-twitter"></i></a></li>
+			<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+		</ul>
+	</nav>
+
+	<div id="prof_info">
+		<h2><%= @user.fname + " " + @user.lname %></h2>
+		<hr>
+		<span class="prof_pic"><%= image_tag @user.avatar.url(:medium) %></span>
+		<div class="tapes_shared"><h2>"No. tapes shared"</h2></div>
+	</div>
 
 
 <% if current_user %>
-<%= link_to "create new mixtape", new_user_tape_path(current_user) %>
+	<div id="to_mixtape">
+		<%= link_to "create new mixtape", new_user_tape_path(current_user), class: :create_button %>
+	</div>
 
-<%= link_to "sign out", log_out_path %>
+	<div id="sign_out">
+		<%= link_to "sign out", log_out_path %>
+	</div>
+<% end %>
 
 
-<% end %>	
+	<div id="tapelist">
+		<h2>YOUR MIXTAPES</h2>
+		<hr>
 
+		<%= render 'tapes/index' %>
 
+	</div>
 
-			<!--  NAVBAR -->
-			<nav class="all_nav">
-				<ul>
-					<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
-					<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
-					<li><a href=""><i class="fa fa-twitter"></i></a></li>
-					<li><a href=""><i class="fa fa-tumblr"></i></a></li>
-				</ul>
-		</nav>
-
-		<div id="prof_info">
-			<h2><%= @user.fname + " " + @user.lname %></h2>
-			<hr>
-			<span class="prof_pic"><%= image_tag @user.avatar.url(:medium) %></span>
-			<div class="tapes_shared"><h2>"No. tapes shared"</h2></div>
-		</div>
-
-		<div id="tapelist">
-				<h2>YOUR MIXTAPES</h2>
-				<hr>
-		</div>
-<%= render 'tapes/index' %>
-	
 
 </div>
 
-
-	<div class="all_footer">
-		<hr><br>
-		<span class="copyright">&copy; Mixt</span>
-	</div>
+<div class="all_footer">
+	<hr><br>
+	<span class="copyright">&copy; Mixt</span>
+</div>
 

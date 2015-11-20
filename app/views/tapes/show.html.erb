@@ -1,10 +1,44 @@
+<div class="tape_page_wrapper">
+	
+	<%=  link_to(image_tag("logo_pink.png", size:"120x49"), user_path(current_user), class: :logo) %>
+
 
 
 <%= link_to "back to home",user_path(current_user) %>
-<%= audio_tag(@tape.id, autoplay: false, controls: true)%><br><br>
+
 <%= @tape.description %>
 
 
+
+
+	<!--  NAVBAR -->
+	<nav class="all_nav_tape">
+		<ul>
+			<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
+			<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
+			<li><a href=""><i class="fa fa-twitter"></i></a></li>
+			<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+		</ul>
+	</nav>
+
+
+	<div id="tape_page_for_user">
+		<h2><%= @tape.tapename %></h2>
+		<hr>
+		<br>
+		<%= audio_tag(@tape.song, autoplay: false, controls: true) %>
+	</div>
+
+	<div id="message_block">
+		<h3><%= @tape.description %></h3>
+	</div>
+</div>
+
+
+<div class="tape_page_footer">
+	<hr><br>
+	<span class="copyright">&copy; Mixt</span>
+</div>
 
 
 

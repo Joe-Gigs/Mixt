@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require_tree .
 
-//=require colors
-//=require popup
+//= require 'colors'
+//= require 'popup'

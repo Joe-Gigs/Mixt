@@ -150,7 +150,7 @@ a {
 
 h1 {
   font-size: 30px;
-  font-color: white;
+  color: white;
   font-family: "Josefin Sans", monospace;
   letter-spacing: 4.5pt; }
 
@@ -546,7 +546,7 @@ a {
 }
 
 #tape_page_for_user {
-  margin-top: 100px;
+  margin-top: 80px;
   width: 800px;
   margin-left: 300px;
 }
@@ -556,7 +556,9 @@ a {
 }
 
 #message_block {
-  width: 200px;
+  width: 800px;
+  margin-left: 300px;
+  display: block;
 }
 
 #message_block h3{
@@ -564,9 +566,11 @@ a {
   font-family: "Josefin Sans", monospace;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 3px;
+  line-height: 20px;
   color: white;  
+  text-align: justify;
 }
 
 .tape_page_footer {
@@ -584,7 +588,9 @@ a {
     color: white;
 }
 
-
+/*========================================
+              LINK POP-UP 
+=========================================*/
 
 
 /*# sourceMappingURL=main.css.map */

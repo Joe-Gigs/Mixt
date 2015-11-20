@@ -14,7 +14,7 @@ class TapesController < ApplicationController
 		@tape = Tape.create(tape_params)
 		@tape.user_id = params[:user_id]
 		if @tape.save
-			redirect_to user_tapes_path(params[:user_id], @tape.id)
+			redirect_to user_tapes_path(@tape.user_id, @tape.id)
 		end
 	end
 	

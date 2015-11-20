@@ -21,7 +21,6 @@
 		</ul>
 	</nav>
 
-
 	<div id="tape_page_for_user">
 		<h2><%= @tape.tapename %></h2>
 		<hr>
@@ -34,6 +33,31 @@
 	</div>
 </div>
 
+<!-- POPUP LINK -->
+<div class="button_container" id="toggle">
+	<h1>SHARE</h1>
+	<br>
+	<span class="top"></span>
+  	<span class="middle"></span>
+  	<span class="bottom"></span>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="overlay-menu">
+    <ul>
+      <p>All set! Copy the following link<br>to share yourmixtape</p>
+      <br>
+      <div id="link_tape_box">
+	  <li><a href="" class="link_for_tape"><%= user_tape_url %></a></li></div>
+      <br><br>
+      <li><a href=""><i class="fa fa-facebook-official"></i></a></li>
+      <li><a href=""><i class="fa fa-soundcloud"></i></a></li>
+      <li><a href=""><i class="fa fa-twitter"></i></a></li>
+      <li><a href=""><i class="fa fa-tumblr"></i></a></li>
+    </ul>
+  </div>
+</div>
+<!-- end of popup -->
 
 <div class="tape_page_footer">
 	<hr><br>

@@ -3,7 +3,6 @@ class TapesController < ApplicationController
 	def index
 		@user = current_user
 		@tapes = Tape.all
-
 	end
 
 	def new
@@ -12,7 +11,7 @@ class TapesController < ApplicationController
 	end
 
 	def create
-		@tape = Tape.new(tape_params)
+		@tape = Tape.create(tape_params)
 		@tape.user_id = params[:user_id]
 		if @tape.save
 			redirect_to user_tape_path(params[:user_id], @tape.id)
@@ -27,6 +26,7 @@ class TapesController < ApplicationController
 
 	def update
 		if @tape.update(tape_params)
+			@tape.user_id = params[:user_id]
 			redirect_to [@tape.user, @tape]
 			
 		end

@@ -7,15 +7,14 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		if @user.save
-		session[:user_id] = @user.id #VERY IMPORTANT, LIKE SERIOUSLY
-
-	
-
-		redirect_to @user
-	else
-		render :new
+			session[:user_id] = @user.id #VERY IMPORTANT, LIKE SERIOUSLY
+			flash[:created] = "New user created"
+			redirect_to @user
+		else
+			flash[:fillagain] = "Please fill the form correctly"
+			render :new
+		end
 	end
-end
 
 	def edit
 
@@ -26,8 +25,8 @@ end
 			redirect_to @user
 		else
 			render :new
+		end
 	end
-end
 
 	def index
 		@users = User.all
@@ -41,7 +40,6 @@ end
 	def destroy
 		@user.destroy
 		redirect_to log_in_path
-
 	end
 	
 
@@ -52,7 +50,7 @@ end
 	end
 
 	def user_params
-		params.require(:user).permit(:fname, :lname, :username, :password, :password_confirmation, :avatar)
+		params.require(:user).permit(:fname, :lname, :username, :password, :avatar)
 	end
 end
 

@@ -1,4 +1,6 @@
 <div class="user_form">
+<h3><%= flash[:fillagain] if flash[:fillagain] %></h3>
+
 	<%= form_for @user do |user|%>
 		
 		<div class="form">

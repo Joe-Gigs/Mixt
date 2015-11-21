@@ -1,6 +1,13 @@
 class User < ActiveRecord::Base
 	has_many :tapes
-	# has_many :songs, through: :mixtape
+	
+	
+
+
+
+
+  	
+  	# validates :avatar, attachment_presence: true
 
 	attr_accessor :password_salt
 	attr_accessor :password_hash
@@ -27,5 +34,6 @@ class User < ActiveRecord::Base
 		 def normalize_username
 	      self.username = self.username.downcase
 	    end
+
 end
 

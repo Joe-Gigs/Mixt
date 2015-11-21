@@ -1,33 +1,33 @@
-class MixtapesController < ApplicationController
-	def index 
+# class MixtapesController < ApplicationController
+# 	def index 
 
-	end
+# 	end
 
-	def new
-		@mixtape = Mixtape.new
-		if @mixtape.save
+# 	def new
+# 		@mixtape = Mixtape.new
+# 		if @mixtape.save
 
-	end
+# 	end
 
-	def create
-	end
+# 	def create
+# 	end
 
-	def show
-	end
+# 	def show
+# 	end
 
-	def edit
-	end
+# 	def edit
+# 	end
 
-	def update
-	end
+# 	def update
+# 	end
 
-	def destroy
-	end
+# 	def destroy
+# 	end
 
-	private
-	def mixtape_params
-		params.require(:mixtape).permit(:user_id)
-	end
+# 	private
+# 	def mixtape_params
+# 		params.require(:mixtape).permit(:user_id)
+# 	end
 
-end
-end
+# end
+# end

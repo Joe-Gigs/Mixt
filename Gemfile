@@ -24,11 +24,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "paperclip", "~> 4.3"
-gem 'jquery-fileupload-rails'
+
+gem "jquery-fileupload-rails"
+
 
 gem 'rails_autolink'
 
-gem 'rails_autolink'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

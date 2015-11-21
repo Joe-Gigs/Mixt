@@ -19,7 +19,8 @@ class TapesController < ApplicationController
 	end
 	
 	def show
-
+		# @songs = Song.all
+		@tape = Tape.find(params[:id])
 	end
 
 	def edit
@@ -41,7 +42,7 @@ class TapesController < ApplicationController
 	private
 
 	def tape_params
-		params.require(:tape).permit(:tapename, :description, :user_id, :song).merge(user: current_user)
+		params.require(:tape).permit(:tapename, :description, :user_id, :tapepic).merge(user: current_user)
 	end
 	
 	def set_tape

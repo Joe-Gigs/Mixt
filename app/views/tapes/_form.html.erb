@@ -15,9 +15,9 @@
 				<h2><%= tape.text_field :tapename, class: :tape_form, :placeholder => "Tape Name" %></h2><br><br>
 				<h2><%= tape.text_area :description, id: :description, :placeholder => "Leave a message here" %></h2><br><br>
 		</div>
-​
+
 		<div id="songs">
-			<%= tape.file_field :song %><br><br>
+			<%= tape.file_field :tapepic %>
 			<%= tape.submit 'Create Tape', class: :create_button %>
 			<br><br>
 			<%= link_to "Go Back" , user_path(current_user), :class => :create_button %>

@@ -16,6 +16,7 @@
 		<hr>
 		<span class="prof_pic"><%= image_tag @user.avatar.url(:medium) %></span>
 		<div class="tapes_shared"><h2>"No. tapes shared"</h2></div>
+		<p><%= flash[:created] if flash[:created] %></p>
 	</div>
 
 

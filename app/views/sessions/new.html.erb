@@ -11,6 +11,8 @@
 			</ul>
 		</nav>
 
+		<h3><%= flash[:not_created] if flash[:not_created] %></h3>
+
 		<!-- MAIN FORM -->
 		<div id="sign_wrap">
 			<div class="centered-text">
@@ -21,6 +23,7 @@
 			<%= render 'new_user_form' %>
 		
 			<h3>DON'T HAVE AN ACCOUNT? <a href="/users/new"><strong>SIGN UP</strong></a></h3>
+
 		</div>
 		
 		<!-- SIGNUP/SIGNIN FOOTER -->

@@ -29,8 +29,6 @@ gem 'jquery-fileupload-rails'
 gem 'rails_autolink'
 
 gem 'rails_autolink'
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -26,6 +26,7 @@ html {
   right: 0;
   height: 100%;
   width: 100%;
+  background-color: #EAFAFA;
   animation: fadein 2s;
   -moz-animation: fadein 2s;
   /* Firefox */
@@ -344,7 +345,7 @@ a {
 .all_wrapper {
   background-color: #EAFAFA;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   padding-top: 0px;
   bottom: 0;
@@ -439,7 +440,7 @@ a {
   font-family: "Josefin Sans", monospace;
   font-size: 10px;
   position: fixed;
-  bottom: 25px;
+  bottom: 0px;
   background-color: #EAFAFA;
 }
   .all_footer hr{
@@ -458,7 +459,8 @@ a {
   =========================================*/
 .newtape {
   margin-top: 120px;
-  max-width: 200px;
+  margin-left: 200px;
+  max-width: 720px;
   float: left;
   text-align: center;
   display: inline-block;
@@ -488,9 +490,9 @@ a {
 }
 
 #songs {
-  margin-top: 130px;
-  margin-left: 280px;
-  width: 400px;
+  margin-top: 0px;
+  margin-left: auto;
+  width: 720px;
   display: inline-block;
 }
 
@@ -581,16 +583,18 @@ a {
     font-family: "Josefin Sans", monospace;
     font-size: 10px;
     position: fixed;
-    bottom: 25px;
+    bottom: 0px;
 }
 
 .tape_page_footer hr{
     color: white;
 }
 
-/*========================================
-              LINK POP-UP 
-=========================================*/
-
+.tapes_avatar {
+    margin-left: 300px;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
 
 /*# sourceMappingURL=main.css.map */

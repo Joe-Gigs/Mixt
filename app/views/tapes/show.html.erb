@@ -2,9 +2,6 @@
 	
 	<%=  link_to(image_tag("logo_pink.png", size:"120x49"), user_path(current_user), class: :logo) %>
 
-
-
-
 	<!--  NAVBAR -->
 	<nav class="all_nav_tape">
 		<ul>
@@ -14,15 +11,11 @@
 			<li><a href=""><i class="fa fa-tumblr"></i></a></li>
 		</ul>
 	</nav>
-
-<%= image_tag @tape.tapepic.url(:medium) %>
-
 <!-- = form_for @song.tape_id do |song| 
 = song.file_field :song %><br><br>
 = song.submit 'ADD A SONG', :class => 'submit_button' 
 
  end  -->
-
 
 	<div id="tape_page_for_user">
 		<h2><%= @tape.tapename %></h2>
@@ -31,9 +24,14 @@
 
 <!-- 		= audio_tag(@tape.song, autoplay: false, controls: true) %>
  -->	</div>
+	<div class="tapes_avatar">
+		<%= image_tag @tape.tapepic.url(:medium) %>
+	</div>
 
 	<div id="message_block">
-		<h3><%= @tape.description %></h3>
+		<h3><%= @tape.description %></h3><br><br>
+		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Go Back" , user_path(current_user), :class => :create_button %></h3>
+		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Delete Tape", user_tape_path, data: { confirm: "are you sure? "}, method: :delete, class: :create_button %></h3>
 	</div>
 </div>
 

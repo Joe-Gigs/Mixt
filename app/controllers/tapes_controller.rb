@@ -15,6 +15,9 @@ class TapesController < ApplicationController
 		@tape.user_id = params[:user_id]
 		if @tape.save
 			redirect_to user_tape_path(@tape.user_id, @tape.id)
+		else
+			redirect_to new_user_tape_path(current_user)
+			flash[:notape] = "Please keep your tape name and description short. And remember to add an image"
 		end
 	end
 	
@@ -30,13 +33,12 @@ class TapesController < ApplicationController
 		if @tape.update(tape_params)
 			@tape.user_id = params[:user_id]
 			redirect_to [@tape.user, @tape]
-			
 		end
 	end
 
 	def destroy
 		@tape.destroy
-		redirect_to user_tape_path
+		redirect_to user_path(current_user)
 	end
 
 	private

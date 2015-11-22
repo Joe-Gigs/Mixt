@@ -4,19 +4,16 @@ class SongsController < ApplicationController
 	def index
 		@tape = current_tape
 		@songs = Song.all
-
 	end
 
 	def new 
-		@tape = current_tape
-		@song.Song.new
+		@song = Song.new
 	end
 
 	def create
 		@song = Song.create(song_params)
 		@song.tape_id = params[:tape_id]
-		if @song.save
-			redirect_to user_tape_song_path(@song.tape_id, @song.id)
+		redirect_to tape_path(params[:tape_id])
 	end
 
 	def show
@@ -35,11 +32,10 @@ class SongsController < ApplicationController
 	private
 
 	def song_params
-		params.require(:songs).permit(:song).merge(tape: current_tape)
+		params.require(:song).permit(:song)
 	end
 
 	def set_song
 		@song = Song.find(params[:id])
 	end
-end
 end

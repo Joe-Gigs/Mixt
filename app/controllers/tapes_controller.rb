@@ -6,15 +6,15 @@ class TapesController < ApplicationController
 	end
 
 	def new
-		@user = current_user
 		@tape = Tape.new
+		@song = Song.new
 	end
 
 	def create
 		@tape = Tape.create(tape_params)
-		@tape.user_id = params[:user_id]
+		@tape.user_id = session[:user_id]
 		if @tape.save
-			redirect_to user_tape_path(@tape.user_id, @tape.id)
+			redirect_to tape_path(@tape.id)
 		else
 			redirect_to new_user_tape_path(current_user)
 			flash[:notape] = "Please keep your tape name and description short. And remember to add an image"

@@ -11,53 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122010228) do
-
-  create_table "mixtapes", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "song_file_name"
-    t.string   "song_content_type"
-    t.integer  "song_file_size"
-    t.datetime "song_updated_at"
-    t.integer  "tape_id"
-    t.integer  "user_id"
-  end
-
-  create_table "tapes", force: :cascade do |t|
-    t.string   "tapename"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "song_file_name"
-    t.string   "song_content_type"
-    t.integer  "song_file_size"
-    t.datetime "song_updated_at"
-    t.string   "tapepic_file_name"
-    t.string   "tapepic_content_type"
-    t.integer  "tapepic_file_size"
-    t.datetime "tapepic_updated_at"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "fname"
-    t.string   "lname"
-    t.string   "username"
-    t.string   "password"
-    t.string   "password_confirmation"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-  end
+ActiveRecord::Schema.define(version: 20151122002430) do
 
 end

@@ -638,7 +638,7 @@ a {
   width: 700px;
 }
 
-li {
+#listofsongs li {
   color: #8BECE8;
   list-style-type: decimal-leading-zero;
   font-family: "Josefin Sans", monospace;

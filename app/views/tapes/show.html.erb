@@ -15,7 +15,7 @@
 	<div id="add_song">
 		<%= form_for([@tape, @tape.songs.create]) do |song| %>
 		<!-- HOPEFULLY THIS WOULD WORK -->
-			<%= song.file_field :song%><br>
+			<%= song.file_field :song %><br>
 			<%= song.submit 'ADD A SONG', :class => 'submit_button_small' %>
 		<% end %> 
 
@@ -78,8 +78,6 @@
     </ul>
   </div>
 </div>
-
-
 
 <!-- end of popup -->
 

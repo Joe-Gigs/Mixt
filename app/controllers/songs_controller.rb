@@ -11,12 +11,13 @@ class SongsController < ApplicationController
 		@tape = Tape.find(params[:tape_id])
 		@song = @tape.songs.create(song_params)
 		@song.user_id = current_user.id 
-		redirect_to @tape
+		
 		if @song.save 
 			flash[:heya] = "Song added"
 		else
 			flash[:notworking] = "Song not added"
 		end
+		redirect_to @tape
 	end
 
 	def show

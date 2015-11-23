@@ -13,7 +13,7 @@
 	</nav>
 	
 	<div id="add_song">
-		<%= form_for([@tape, @tape.songs.create]) do |song| %>
+		<%= form_for([@tape, Song.new]) do |song| %>
 		<!-- HOPEFULLY THIS WOULD WORK -->
 			<%= song.file_field :song %><br>
 			<%= song.submit 'ADD A SONG', :class => 'submit_button_small' %>
@@ -33,14 +33,15 @@
 	</div>
 
 	<div id="tape_player_controls">
-		<% @tape.songs.each do |song| %>
-		<h2><%= audio_tag(song.song_file_name, autoplay: false, controls: true, :class => :audiotags ) %></h2>
+		<% @songs.each do |song| %>
+			<h2><%= audio_tag(song.song_file_name, autoplay: false, controls: true, :class => :audiotags) %></h2>
 		<% end %>
 	</div>
+
 	<div id="tracklist_list">
 			<ul id="listofsongs">
-				<% @tape.songs.each do |song| %>
-				   <li><h5><%= song.song_file_name %></h5></li>
+				<% @songs.each do |song| %>
+				  <h5><li><%= song.song_file_name %></li></h5>
 				<% end %>
 			</ul>
 	</div>

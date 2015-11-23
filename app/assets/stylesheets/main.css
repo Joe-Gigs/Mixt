@@ -425,6 +425,7 @@ a {
   font-size: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  width: 200px;
 }
 
 #tapelist hr {
@@ -642,7 +643,7 @@ a {
   color: #8BECE8;
   list-style-type: decimal-leading-zero;
   font-family: "Josefin Sans", monospace;
-  font-size: 12px;
+  font-size: 8px;
   line-height: 12px;
 }
 

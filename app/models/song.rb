@@ -6,6 +6,8 @@ class Song < ActiveRecord::Base
 	 					:url  => "/songs/:id/:filename",
 	 					:default_url => "/assets/audios"
 
+
+	 validates :tape, presence: true
 	 validates_attachment_presence :song
 	 validates_attachment_content_type :song, :content_type => [ 'audio/mp3','audio/mpeg']
 	 validates_attachment_size :song, :less_than => 10.megabytes, 

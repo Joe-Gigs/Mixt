@@ -620,13 +620,22 @@ a {
 
 #tracklist_list {
   float: right;
-  display: inline-block;
-  margin-right: 800px;
-  margin-top: -220px;
+  display: block;
+  margin-right: 700px;
+  margin-top: -210px;
+  width: 200px;
+  clear: left;
+}
+
+#tape_player_controls {
+  float: right;
+  display: block;
+  margin-right: 340px;
 }
 
 #listofsongs {
-  display: inline;
+  display: inline-block;
+  width: 700px;
 }
 
 li {
@@ -634,15 +643,14 @@ li {
   list-style-type: decimal-leading-zero;
   font-family: "Josefin Sans", monospace;
   font-size: 12px;
-  line-height: 8px;
+  line-height: 12px;
 }
 
 .audiotags {
   float: right;
+  display: inline-block;
+  width: 300px;
 }
 
 
 
-
-
-/*# sourceMappingURL=main.css.map */

@@ -14,9 +14,10 @@
 	
 	<div id="add_song">
 		<%= form_for([@tape, @tape.songs.create]) do |song| %>
-			<%= song.file_field :song %><br>
-			<%= song.submit 'ADD A SONG', :class => 'submit_button_small'  %>
-		 <% end %> 
+		<!-- HOPEFULLY THIS WOULD WORK -->
+			<%= song.file_field :song%><br>
+			<%= song.submit 'ADD A SONG', :class => 'submit_button_small' %>
+		<% end %> 
 
 		<h2><%= flash[:notworking] if flash[:notworking] %></h2>
 		<h2><%= flash[:heya] if flash[:heya] %></h2>
@@ -25,7 +26,8 @@
 	<div id="tape_page_for_user">
 		<h2><%= @tape.tapename %></h2>
 		<hr>
-		<br>
+	
+		<h2><%= audio_tag(@tape.songs, autoplay: true, controls: true, :class => :audiotags )%></h2>
 
 <!-- 		= audio_tag(@tape.song, autoplay: false, controls: true) %>
  -->	</div>
@@ -34,11 +36,17 @@
 	</div>
 
 	<div id="tracklist_list">
-		<h2><%= audio_tag(@tape.songs, autoplay: false, controls: true, :class => :audiotags )%></h2>
+			<ul id="listofsongs">
+				<% @tape.songs.each do |song| %>
+				   <li><h5><%= song.song_file_name %></h5></li>
+				<% end %>
+			</ul>
 	</div>
 
 	<div id="message_block">
+
 		<h3><%= @tape.description %></h3><br><br>
+
 		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Go Back" , user_path(current_user), :class => :create_button %></h3>
 		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Delete Tape", tape_path, data: { confirm: "are you sure? "}, method: :delete, class: :create_button %></h3>
 	</div>
@@ -68,12 +76,14 @@
     </ul>
   </div>
 </div>
+
 <!-- end of popup -->
 
 <div class="tape_page_footer">
 	<hr><br>
 	<span class="copyright">&copy; Mixt</span>
 </div>
+
 
 
 

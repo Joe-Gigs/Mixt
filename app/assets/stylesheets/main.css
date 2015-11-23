@@ -548,7 +548,7 @@ a {
 }
 
 #tape_page_for_user {
-  margin-top: 0px;
+  margin-top: -30px;
   width: 800px;
   margin-left: 300px;
 }
@@ -620,9 +620,29 @@ a {
 
 #tracklist_list {
   float: right;
-  display: inline;
-  margin-right: 500px;
+  display: inline-block;
+  margin-right: 800px;
+  margin-top: -220px;
 }
+
+#listofsongs {
+  display: inline;
+}
+
+li {
+  color: #8BECE8;
+  list-style-type: decimal-leading-zero;
+  font-family: "Josefin Sans", monospace;
+  font-size: 12px;
+  line-height: 8px;
+}
+
+.audiotags {
+  float: right;
+}
+
+
+
 
 
 /*# sourceMappingURL=main.css.map */

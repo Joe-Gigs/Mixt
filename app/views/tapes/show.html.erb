@@ -11,11 +11,16 @@
 			<li><a href=""><i class="fa fa-tumblr"></i></a></li>
 		</ul>
 	</nav>
-		
-		<%= form_for([@tape, @tape.songs.build]) do |song| %>
-			<%= song.file_field :song %><br><br>
-			<%= song.submit 'ADD A SONG', :class => 'submit_button'  %>
+	
+	<div id="add_song">
+		<%= form_for([@tape, @tape.songs.create]) do |song| %>
+			<%= song.file_field :song %><br>
+			<%= song.submit 'ADD A SONG', :class => 'submit_button_small'  %>
 		 <% end %> 
+
+		<h2><%= flash[:notworking] if flash[:notworking] %></h2>
+		<h2><%= flash[:heya] if flash[:heya] %></h2>
+	 </div>
 
 	<div id="tape_page_for_user">
 		<h2><%= @tape.tapename %></h2>
@@ -28,9 +33,12 @@
 		<%= image_tag @tape.tapepic.url(:medium) %>
 	</div>
 
+	<div id="tracklist_list">
+		<h2><%= audio_tag(@tape.songs, autoplay: false, controls: true, :class => :audiotags )%></h2>
+	</div>
+
 	<div id="message_block">
 		<h3><%= @tape.description %></h3><br><br>
-		<h3><%= audio_tag(@tape.songs, autoplay: false, controls: true) %></h3>
 		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Go Back" , user_path(current_user), :class => :create_button %></h3>
 		<h3 style="text-align: center ; color: white ; display: inline"><%= link_to "Delete Tape", tape_path, data: { confirm: "are you sure? "}, method: :delete, class: :create_button %></h3>
 	</div>

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-	has_many :tapes
+	has_many :tapes, dependent: :destroy
+	has_many :songs, :through => :tapes
 	
   	# validates :avatar, attachment_presence: true
 

@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-
 	end
 
 	def update
@@ -33,8 +32,6 @@ class UsersController < ApplicationController
 	end
 
 	def show
-
-		
 	end
 
 	def destroy

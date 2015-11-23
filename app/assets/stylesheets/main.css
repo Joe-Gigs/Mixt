@@ -548,7 +548,7 @@ a {
 }
 
 #tape_page_for_user {
-  margin-top: 80px;
+  margin-top: 0px;
   width: 800px;
   margin-left: 300px;
 }
@@ -576,25 +576,53 @@ a {
 }
 
 .tape_page_footer {
-    text-align: center;
-    width: 100%;
-    height: 40px;
-    color: white;
-    font-family: "Josefin Sans", monospace;
-    font-size: 10px;
-    position: fixed;
-    bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-family: "Josefin Sans", monospace;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0px;
 }
 
 .tape_page_footer hr{
-    color: white;
+  color: white;
 }
 
 .tapes_avatar {
-    margin-left: 300px;
-    width: 200px;
-    height: 200px;
-    display: block;
+  margin-left: 300px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
 }
+
+#add_song {
+  text-align: center;
+  margin: 10px auto;
+  display: inline;
+  padding: 10px;
+  width: 200px;
+  color: white;
+}
+
+.submit_button_small {
+  font-family: "Josefin Sans", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: #EC2874;
+  letter-spacing: 3px;
+  border-style: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#tracklist_list {
+  float: right;
+  display: inline;
+  margin-right: 500px;
+}
+
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,6 @@
 class TapesController < ApplicationController
 	before_action :set_tape, only: [:show, :edit, :update, :destroy]
 	def index
-		@user = current_user
 		@tapes = Tape.all
 	end
 
@@ -12,7 +11,6 @@ class TapesController < ApplicationController
 
 	def create
 		@tape = Tape.create(tape_params)
-		@tape.song.create(:song => params[:song])
 		@tape.user_id = session[:user_id]
 		if @tape.save
 			redirect_to tape_path(@tape.id)
@@ -23,8 +21,7 @@ class TapesController < ApplicationController
 	end
 	
 	def show
-		# @songs = Song.all
-		@tape = Tape.find(params[:id])
+		@tapes = Tape.all
 	end
 
 	def edit

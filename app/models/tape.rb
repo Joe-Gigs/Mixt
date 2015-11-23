@@ -8,5 +8,14 @@ class Tape < ActiveRecord::Base
 
 	has_attached_file :tapepic, styles: { medium: "200x200#", thumb: "100x100#" }, :default_url => ActionController::Base.helpers.asset_path('purple_tape.jpg')	
 	validates_attachment_content_type :tapepic, content_type: /\Aimage\/.*\Z/
+
+	
+	# validate :songs_limit, :on => :create
+
+	#   private
+	#   def songs_limit
+	#     return if songs.blank?
+	#     errors.add("You have reached the song limit") if songs.length > 8
+	#   end
 end
 

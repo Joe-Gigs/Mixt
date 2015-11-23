@@ -1,6 +1,4 @@
 class SongsController < ApplicationController
-	before_action :set_song, only: [:show, :edit, :update, :destroy]
-
 	def index
 		@songs = Song.all
 	end
@@ -10,8 +8,10 @@ class SongsController < ApplicationController
 	end
 
 	def create
-		@song = Song.create(song_params)
-		redirect_to tape_path(params[:tape_id])
+		@tape = Tape.find(params[:tape_id])
+		@song = @tape.songs.create(song_params)
+		@song.user_id = current_user.id 
+		redirect_to @tape
 		if @song.save 
 			flash[:heya] = "Song added"
 		else

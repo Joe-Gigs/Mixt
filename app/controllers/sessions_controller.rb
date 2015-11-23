@@ -10,11 +10,12 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         puts "**session created**"
         flash[:notice] = "Success."
-      else
-        flash[:alert] = "There was a problem"
-        puts "**oh fuck**"
-      end
         redirect_to @user
+      else
+        flash[:alert] = "Wrong credentials. Please try again"
+        puts "**oh fuck**"
+        render :new
+      end
   end
 
   def destroy

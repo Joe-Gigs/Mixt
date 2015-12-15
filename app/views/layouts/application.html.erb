@@ -12,7 +12,6 @@
   <!-- GOOGLE FONTS -->
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300,300italic' rel='stylesheet' type='text/css'>
   <!-- JPLAYER SCRIPT -->
-  <script src="jplayer_1.js"></script>
   	
 </head>
 <body>
@@ -22,7 +21,12 @@
 
 <!-- jquery -->
 
-  <script src="toggle_overlay.js"></script>
+  <script>
+    $('#toggle').click(function() {
+          $(this).toggleClass('active');
+          $('#overlay').toggleClass('open');
+         });
+  </script>
 </body>
 </html>
 

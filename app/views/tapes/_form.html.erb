@@ -12,19 +12,19 @@
 	
 	<%= form_for @tape do |tape| %> 
 		<div class="newtape">
-				<h2><%= tape.text_field :tapename, class: :tape_form, :placeholder => "Tape Name (short)" %></h2><br><br>
-				<h1 style="color: black ; text-transform: uppercase; font-size: 12px"> Add an image here </h1><br>
-				<%= tape.file_field :tapepic, :placeholder => "Add an image" %><br><br>
-				<h2><%= tape.text_area :description, id: :description, :placeholder => "Leave a message here. Please keep it under 250 characters" %></h2><br><br>
-				
-				<div id="songs">
-					<br><br>
-					<%= tape.submit 'Create Tape', class: :create_button %>
-					<br><br>
-					<%= link_to "Go Back" , user_path(current_user), :class => :create_button %>
-					<br><br>
-					<h2 style="color: black"><%= flash[:notape] if flash[:notape] %></h2>
-				</div>
+			<h2><%= tape.text_field :tapename, class: :tape_form, :placeholder => "Tape Name (short)" %></h2><br><br>
+			<h1 style="color: black ; text-transform: uppercase; font-size: 12px"> Add an image here </h1><br>
+			<%= tape.file_field :tapepic, :placeholder => "Add an image" %><br><br>
+			<h2><%= tape.text_area :description, id: :description, :placeholder => "Leave a message here. Please keep it under 1000 characters" %></h2><br><br>
+			
+			<div id="songs">
+				<br><br>
+				<%= tape.submit 'Create Tape', class: :create_button %>
+				<br><br>
+				<%= link_to "Go Back" , user_path(current_user), :class => :create_button %>
+				<br><br>
+				<h2 style="color: black"><%= flash[:notape] if flash[:notape] %></h2>
+			</div>
 		</div>
 
 	<% end %>

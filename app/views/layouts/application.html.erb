@@ -11,23 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- GOOGLE FONTS -->
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300,300italic' rel='stylesheet' type='text/css'>
-
-  <script type="text/javascript">
-      $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-          swfPath: "/assets/jplayerflash",
-          supplied: "mp3",
-          wmode: "window"
-      });
-      $('a.play').click(function(e) {
-          e.preventDefault();
-          $("#jquery_jplayer_1")
-              .jPlayer("setMedia", {mp3: this.href })
-              .jPlayer("play");
-      });
-    });
-    </script>
-
+  <!-- JPLAYER SCRIPT -->
+  <script src="jplayer_1.js"></script>
   	
 </head>
 <body>
@@ -37,12 +22,7 @@
 
 <!-- jquery -->
 
-  <script>
-    $('#toggle').click(function() {
-       $(this).toggleClass('active');
-       $('#overlay').toggleClass('open');
-      });
-  </script>
+  <script src="toggle_overlay.js"></script>
 </body>
 </html>
 

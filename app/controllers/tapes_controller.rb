@@ -51,6 +51,7 @@ class TapesController < ApplicationController
 	
 	def set_tape
 		@tape = Tape.find(params[:id])
+		@songs = @tape.songs
 	end
 end
 

@@ -5,17 +5,17 @@
 	<!--  NAVBAR -->
 	<nav class="all_nav_tape">
 		<ul>
-			<li><a href=""><i class="fa fa-facebook-official"></i></a></li>
-			<li><a href=""><i class="fa fa-soundcloud"></i></a></li>
-			<li><a href=""><i class="fa fa-twitter"></i></a></li>
-			<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+			<li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+			<li><a href="http://www.soundcloud.com" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
+			<li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="http://www.tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a></li>
 		</ul>
 	</nav>
 	
 	<div id="add_song">
-		<%= form_for([@tape, @tape.songs.create]) do |song| %>
+		<%= form_for([@tape, Song.new]) do |song| %>
 		<!-- HOPEFULLY THIS WOULD WORK -->
-			<%= song.file_field :song%><br>
+			<%= song.file_field :song %><br>
 			<%= song.submit 'ADD A SONG', :class => 'submit_button_small' %>
 		<% end %> 
 
@@ -33,14 +33,15 @@
 	</div>
 
 	<div id="tape_player_controls">
-		<% @tape.songs.each do |song| %>
-		<h2><%= audio_tag(song.song_file_name, autoplay: false, controls: true, :class => :audiotags ) %></h2>
+		<% @songs.each do |song| %>
+			<h2><%= audio_tag(song.song_file_name, autoplay: false, controls: true, :class => :audiotags) %></h2>
 		<% end %>
 	</div>
+
 	<div id="tracklist_list">
 			<ul id="listofsongs">
-				<% @tape.songs.each do |song| %>
-				   <li><h5><%= song.song_file_name %></h5></li>
+				<% @songs.each do |song| %>
+				  <h5><li><%= song.song_file_name %></li></h5>
 				<% end %>
 			</ul>
 	</div>
@@ -71,15 +72,13 @@
       <div id="link_tape_box">
 	  <li><a href="" class="link_for_tape"><%= tape_url %></a></li></div>
       <br><br>
-      <li><a href=""><i class="fa fa-facebook-official"></i></a></li>
-      <li><a href=""><i class="fa fa-soundcloud"></i></a></li>
-      <li><a href=""><i class="fa fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa fa-tumblr"></i></a></li>
+      <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+	  <li><a href="http://www.soundcloud.com" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
+      <li><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+	  <li><a href="http://www.tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a></li>
     </ul>
   </div>
 </div>
-
-
 
 <!-- end of popup -->
 

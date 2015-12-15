@@ -125,11 +125,13 @@
   color: #FFF;
   text-decoration: none;
   overflow: hidden;
+  text-transform: lowercase;
 }
 
 .overlay p {
 	font-size: 20px;
 	color: #fff;
+  text-transform: lowercase;
 }
 
 .overlay .link_for_tape {

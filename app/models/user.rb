@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password_salt
 	attr_accessor :password_hash
 	
-	before_validation :normalize_username, on: :create
+	before_validation :normalize_username, on: :createi
 	before_save :encrypt_password
 
 	has_attached_file :avatar, styles: { medium: "200x200#", thumb: "100x100#" }, :default_url => ActionController::Base.helpers.asset_path('pink_tape.jpg')	
@@ -29,6 +29,5 @@ class User < ActiveRecord::Base
 		 def normalize_username
 	      self.username = self.username.downcase
 	    end
-
 end
 

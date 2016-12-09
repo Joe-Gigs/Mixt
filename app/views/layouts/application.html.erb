@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mixt | Share Mixtapes</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- FONT AWESOME ICONS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- GOOGLE FONTS -->
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300,300italic' rel='stylesheet' type='text/css'>
-  <!-- JPLAYER SCRIPT -->
-  	
-</head>
-<body>
-
-<%= yield %>
-
-
-<!-- jquery -->
-
-  <script>
-    $('#toggle').click(function() {
-          $(this).toggleClass('active');
-          $('#overlay').toggleClass('open');
-         });
-  </script>
-</body>
+  <head>
+    <title>Mixt | Share Mixtapes</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300,300italic' rel='stylesheet' type='text/css'>
+    <!-- JPLAYER SCRIPT -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </head>
+  <body>
+    <%= yield %>
+    <!-- jquery -->
+    <script>
+      $('#toggle').click(function() {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+           });
+    </script>
+  </body>
 </html>
-
-

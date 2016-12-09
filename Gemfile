@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip", "~> 4.3"
 
 gem "jquery-fileupload-rails"
+gem 'devise', '~> 4.2'
 
 
 gem 'rails_autolink'
